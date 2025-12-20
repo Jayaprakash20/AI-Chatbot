@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot with RAG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-header">
+            <h1>AI Assistant</h1>
+            <button id="clearBtn" class="clear-btn">Clear Chat</button>
+        </div>
+        
+        <div id="chatMessages" class="chat-messages"></div>
+        
+        <form id="chatForm" class="chat-form">
+            <input 
+                type="text" 
+                id="messageInput" 
+                placeholder="Type your message..." 
+                required
+                minlength="1"
+                maxlength="500"
+            >
+            <button type="submit" id="sendBtn">Send</button>
+        </form>
+        
+        <div id="errorMessage" class="error-message"></div>
+        
+        <!-- Document Upload Section -->
+        <div class="upload-section">
+            <h3>Upload Knowledge</h3>
+            <textarea 
+                id="documentText" 
+                placeholder="Paste document content here..."
+                maxlength="5000"
+            ></textarea>
+            <button id="uploadBtn">Upload to Knowledge Base</button>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
